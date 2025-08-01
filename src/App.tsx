@@ -1,16 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './pages/login/Login';
-import Register from './pages/register/Register';
+import React from 'react';
+import Sidebar from './components/landingpage/Sidebar';
+import Feed from './components/landingpage/Feed';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-    </Router>
+    <div className="flex flex-col min-h-screen bg-gray-100">
+    
+      <div className="flex flex-1">
+        <Sidebar />
+        <Feed />
+      </div>
+    </div>
   );
-}
+};
 
 export default App;
